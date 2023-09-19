@@ -382,19 +382,19 @@ h1 {
     display: flex;
 }
 
-#projets > .project:nth-child(odd) {
+#projets > .project:nth-child(2n of .active) {
     flex-direction: row-reverse;
     margin-left: 40px;
     padding: 0 40px 0 80px;
 }
 
-#projets > .project:nth-child(odd) > .projectInfo {
+#projets > .project:nth-child(2n of .active) > .projectInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-#projets > .project:nth-child(odd) > .projectBackground {
+#projets > .project:nth-child(2n of .active) > .projectBackground {
     margin-left: 0;
     margin-right: -150px;
 }
