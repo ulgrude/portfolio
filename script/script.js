@@ -84,6 +84,7 @@ for (var i = 0; i < dots.length; i++) {
 
 // quand on clique sur un .sort-button, on ajoute la classe active à ce .sort-button et on l'enlève à ses frères
 // et on affiche les projets correspondant à la catégorie du .sort-button cliqué en fonction du data-tag des enfants de #projets
+// si on tri par date alors on affiche tous les projets
 var sortButtons = document.getElementsByClassName("sort-button");
 for (var i = 0; i < sortButtons.length; i++) {
     var sortButton = sortButtons[i];
@@ -100,12 +101,18 @@ for (var i = 0; i < sortButtons.length; i++) {
             if (!projet.dataset.tag) {
                 continue;
             } else {
-                var tableauTags = projet.dataset.tag.split(", ");
-                 if (tableauTags.includes(this.dataset.tag)) {
+                if (this.dataset.tag === "date") {
+                    // Si le tag est "date", on affiche tous les projets
                     projet.classList.add("active");
                     ++count;
                 } else {
-                    projet.classList.remove("active");
+                    var tableauTags = projet.dataset.tag.split(", ");
+                    if (tableauTags.includes(this.dataset.tag)) {
+                        projet.classList.add("active");
+                        ++count;
+                    } else {
+                        projet.classList.remove("active");
+                    }
                 }
             }
         }
@@ -125,23 +132,3 @@ for (var i = 0; i < sortButtons.length; i++) {
 // on simule le clic sur le .sort-button.active
 var sortButtonActive = document.getElementsByClassName("sort-button active")[0];
 sortButtonActive.click();
-
-// on affiche entre parenthèse le nombre de projets correspondant à chaque .sort-button
-var sortButtons = document.getElementsByClassName("sort-button");
-for (var i = 0; i < sortButtons.length; i++) {
-    var sortButton = sortButtons[i];
-    var projets = document.getElementById("projets").children;
-    var nombreProjets = 0;
-    for (var j = 0; j < projets.length; j++) {
-        var projet = projets[j];
-        if (!projet.dataset.tag) {
-            continue;
-        } else {
-            var tableauTags = projet.dataset.tag.split(", ");
-            if (tableauTags.includes(sortButton.dataset.tag)) {
-                nombreProjets++;
-            }
-        }
-    }
-    sortButton.innerHTML += " (" + nombreProjets + ")";
-}
