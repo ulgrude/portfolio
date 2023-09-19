@@ -1,0 +1,231 @@
+:root {
+    --header-nav: 30px 30px;
+    --logo-shadow: rgba(255, 47, 82, 0.7);
+    --delay: .4s;
+    --dark-text-color: rgba(255, 255, 255, 0.4);
+    --dark-red: rgba(59, 22, 36, 0.9);
+}
+
+:nth-child(1) { --nth-child: 1 }
+:nth-child(2) { --nth-child: 2 }
+:nth-child(3) { --nth-child: 3 }
+:nth-child(4) { --nth-child: 4 }
+:nth-child(5) { --nth-child: 5 }
+:nth-child(6) { --nth-child: 6 }
+:nth-child(7) { --nth-child: 7 }
+:nth-child(8) { --nth-child: 8 }
+:nth-child(9) { --nth-child: 9 }
+:nth-child(10) { --nth-child: 10 }
+:nth-child(11) { --nth-child: 11 }
+:nth-child(12) { --nth-child: 12 }
+
+@media screen and (max-width: 1000px) {
+    #navbar-list {
+        display: none!important;
+    }
+    
+    #menu-btn {
+        display: inline-block!important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #menu-right {
+        display: none!important;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: 0.6s;
+    top: 0;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.0) 0px 10px 30px;
+}
+
+.dark-background {
+    background-color: var(--dark-red);
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--header-nav);
+    transition: 0.3s;
+}
+
+#circle-logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url('../images/angelo.jpg');
+    background-size: cover;
+    box-shadow: 0 0 0px var(--logo-shadow);
+    transition: .5s;
+}
+
+#circle-logo:hover {
+    box-shadow: 0 0 20px var(--logo-shadow);
+    transform: scale(1.5);
+}
+
+ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+li a {
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+#navbar-list li a {
+    padding: 20px;
+    color: var(--dark-text-color);
+}
+
+li a:hover {
+    color: white!important;
+}
+
+#navbar-list-right {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#navbar-list-right li a {
+    color: white;
+}
+
+#navbar-list-right li a:hover {
+    color: #fabc3d!important;
+}
+
+#menu-btn {
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 11;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    box-shadow: 0 0 0px var(--logo-shadow);
+    padding: 10px;
+}
+
+#menu-btn:hover {
+    box-shadow: 0 0 20px var(--logo-shadow);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#menu-btn:active {
+    transform: scale(0.9);
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: currentColor;
+    margin: 6px 0;
+    transition: 0.3s, color 0.1s;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#menu-btn.open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(135deg);
+}
+
+#menu-btn.open .bar:nth-child(2) {
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+#menu-btn.open .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-135deg);
+}
+
+#menu-btn.open {
+    color: white;
+}
+
+#menu-right.open {
+    display: block;
+    right: 0;
+}
+
+#menu-right {
+    padding-top: 30px;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    max-width: 100%;
+    top: 0;
+    right: -450px;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.7) -10px 0px 30px;
+    animation: fadeInRight 0.4s ease-out;
+    z-index: 2;
+}
+
+@keyframes fadeInRight {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@-moz-keyframes fadeInRight {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@-o-keyframes fadeInRight {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+

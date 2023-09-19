@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Portfolio - Angelo Foti</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./CSS/style.css"/>
+        <link rel="stylesheet" href="./CSS/navbar.css"/>
+        <link rel="stylesheet" href="./CSS/fonts.css"/>
+        <link rel="stylesheet" href="./CSS/scrollbar.css"/>
+        <link rel="stylesheet" href="./CSS/stars.css"/>
+        <meta name="author" content="Angelo Foti"/>
+        <meta name="description" content="Portfolio - Angelo Foti"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header id="header">
+            <nav id="navbar">
+                <div class="fadeIn">
+                    <a id="circle-logo" href="#home"></a>
+                </div>
+                <div>
+                    <ol id="navbar-list">
+                        <li class="fadeIn"><a href="#home">Accueil</a></li>
+                        <li class="fadeIn"><a href="#presentation">À propos</a></li>
+                        <li class="fadeIn"><a href="#projets">Projets</a></li>
+                        <li class="fadeIn"><a href="#competences">Compétences</a></li>
+                        <li class="fadeIn"><a href="#experiences">Expériences</a></li>
+                        <li class="fadeIn"><a href="#contact">Contact</a></li>
+                    </ol>
+                </div>
+                <div id="menu-btn" class="fadeIn" onclick="openRightMenu(); resizeHeader()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </header>
+        <div id="menu-right">
+            <ol id="navbar-list-right">
+                <li><a class="padding-underlink" href="#home" onclick="openRightMenu();"><span class="underlink">Accueil</span></a></li>
+                <li><a class="padding-underlink" href="#presentation" onclick="openRightMenu();"><span class="underlink">À propos</span></a></li>
+                <li><a class="padding-underlink" href="#projets" onclick="openRightMenu();"><span class="underlink">Projets</span></a></li>
+                <li><a class="padding-underlink" href="#competences" onclick="openRightMenu();"><span class="underlink">Compétences</span></a></li>
+                <li><a class="padding-underlink" href="#experiences" onclick="openRightMenu();"><span class="underlink">Expériences</span></a></li>
+                <li><a class="padding-underlink" href="#contact" onclick="openRightMenu();"><span class="underlink">Contact</span></a></li>
+            </ol>
+        </div>
+
+        <div id="home">
+            <div id="home-content" class="center-vertically">
+                <span>
+                    <p class="fadeIn">Bonjour, je me présente,</p>
+                    <h1 class="fadeIn" style="color: white;">Angelo Foti.</h1>
+                    <h1 class="fadeIn" style="color: #df7884;">Développeur full stack.</h1>
+                    <p id="homePresentation" class="fadeIn">Agé de <span class="age">0 à 99</span> ans et diplômé d'une licence informatique, je passe la plus grande partie de mon temps <a class="underlink" href="#projets">à coder</a>.<br>Aujourd'hui, je suis ouvert à toute opportunité.
+                    </p>
+                    <a id="dismenplus" href="#presentation" class="fadeIn">En savoir<div id="positionPlus"><span class="plus plus1"></span><span class="plus plus2"></span></div></a>
+                </span>
+            </div>
+            
+            <div id="etoiles" class="animation-wrapper">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-4"></div>
+            </div>
+        </div>
+
+        <div id="presentation" class="content">
+            <span class="title" class="spawn">Qui suis-je ?</span>
+            <div class="flex-row spawn">
+                <img class="circle spawn" src="images/angelo-hd.png" alt="Photo d'Angelo Foti" class="spawn" height="340" />
+                <div class="paragraphes spawn">
+                    <p>Je m'appelle Angelo Foti, j'ai <span class="age">entre 0 et 99</span> ans et j'adore laisser libre cours à ma créativité pour développer des sites, des jeux ou encore des outils <i>(voir <a class="underlink" href="#projets">mes projets</a>)</i>. Chaque apprentissage déclenche une explosion d'idées dans ma tête, idées que je m'empresse de développer.</p>
+                    <br>
+                    <p>En 2017, j'ai débuté mes études supérieures à l'<a class="underlink" href="https://sciences-techniques.univ-rouen.fr/" target="_blank">UFR Sciences et Techniques de Rouen</a> où j'ai étudié l'informatique et les mathématiques.
+                        J'y ai découvert un grand nombre de technologies et je me suis par-dessus tout découvert une passion pour le développement web.
+                    </p>
+                    <br>
+                    <p>
+                        Depuis, j'ai obtenu mon diplôme en licence informatique et je me suis lancé dans la création de jeu vidéo indépendant <i>(voir <a class="underlink" href="#projets">mes projets</a>)</i>.
+                        J'ai appris à maîtriser le moteur graphique <a class="underlink" href="https://unity.com/fr" target="_blank">Unity</a> et à développer en <a class="underlink" href="https://docs.microsoft.com/fr-fr/dotnet/csharp/" target="_blank">C#</a>.
+                        En quelques semaines seulement, mes jeux ont été joués par des dizaines de milliers de personnes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separateur separateur-bottom"></div>
+
+        <div id="projets" class="content backgroundColor">
+            <h1>Mes projets</h1>
+            <div class="flex-row project-sort wrap">
+                <p style="margin: 10px">Trier par</p>
+                <div class="sort-button active" data-tag="default"><a href="#projets" class="no-decoration">Défaut</a></div>
+                <div class="sort-button" data-tag="website"><a href="#projets" class="no-decoration">Site web</a></div>
+                <div class="sort-button" data-tag="videogame"><a href="#projets" class="no-decoration">Jeu vidéo</a></div>
+                <div class="sort-button" data-tag="tool"><a href="#projets" class="no-decoration">Outil</a></div>
+                <div class="sort-button" data-tag="animation"><a href="#projets" class="no-decoration">Animation</a></div>
+            </div>
+            <div class="spawn project" data-tag="default, website">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2023 • Website
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Portfolio</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce projet est un site one-page responsive réalisé en HTML, CSS et JavaScript. Il a pour but de regrouper mes projets et mes compétences.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="#home" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="#home" class="no-decoration projectBackgroundLink" target="_blank">
+                        <img src="images/portfolio.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/portfolio2.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/portfolio3.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="default, videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2023 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Planet Destroyer</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce jeu est un semi-idle jouable sur navigateur, compatible PC et smartphone. Je me suis imposé la contrainte de n'utiliser aucun dialogue pour communiquer avec le joueur.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://unity.com/fr" target="_blank">Unity</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/WebGL" target="_blank">WebGL</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/planet-destroyer" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground planet">
+                    <a href="https://ulgrude.itch.io/planet-destroyer" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/planet-destroyer.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/planet-destroyer1.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/planet-destroyer2.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/planet-destroyer3.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="default, videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2023 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Incremental Combo</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce projet est un jeu incrémental jouable sur navigateur, compatible PC et smartphone. Il faut toucher la cible au bon moment pour faire monter le combo. Je me suis imposé la contrainte de n'utiliser aucune image pour réaliser ce jeu.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://unity.com/fr" target="_blank">Unity</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/WebGL" target="_blank">WebGL</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/incremental-combo" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/incremental-combo" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/incremental-combo.png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/incremental-combo2.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 - En cours de développement • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Runes - Idle RPG</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce projet un peu trop ambitieux est celui qui m'a permis de me familiariser avec Unity 3D. Il s'agit d'un jeu idle pour smartphone (Android en l'occurrence).</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://unity.com/fr" target="_blank">Unity</a></li>
+                            <li><a class="no-decoration" href="https://www.android.com/intl/fr_fr/" target="_blank">Android</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a class="no-decoration no-link">🔗 Pas encore de lien...</a>
+                    </div>
+                </div>
+                <div class="projectBackground projectBackgroundLink">
+                    <img src="images/runes.png" alt="Portfolio" class="projectImage"/>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Circular Picture Puzzle</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Importez votre image (ou utilisez celle par défaut), cela la transformera en un puzzle à résoudre. C'est aussi simple que ça !</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/circular-picture-puzzle" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/circular-picture-puzzle" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/puzzle.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 • Jeu éducatif
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Math training</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Entraînez-vous à faire des additions, des soustractions, des multiplications ainsi que des divisions et essayez de battre votre précédent record !</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/math-training" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/math-training" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/math-training.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="animation">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 • Animation
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Battle Start</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Une animation que j'ai faite en CSS et JS pour le fun !</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://codepen.io/ulgrude/pen/qBLVbxZ" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://codepen.io/ulgrude/pen/qBLVbxZ" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/dice-animation.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="website, tool">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 • Website - Outil
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Minuteur</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Minuteurs personnalisés. D'un clic, vous pouvez réutiliser un minuteur que vous avez paramétré avec un son et une couleur d'alerte de votre choix.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/timer?password=beta" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/timer?password=beta" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/timer.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Dungoblin</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce jeu est un clicker RPG rogue-lite où l'on affronte des gobelins dans un donjon pour obtenir de meilleurs équipements pour vaincre plus de gobelins... La mort est punitive mais permet de progresser.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/dungoblin" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/dungoblin" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/dungoblin1.PNG" alt="Portfolio" class="projectImage"/>
+                        <img src="images/dungoblin2.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2021 • Jeu éducatif
+                    </div>
+                    <div class="projectTitle">
+                        <h2>99s - Entrainement Lecture</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Recopiez le plus de mot possible avant que le timer ne soit écoulé mais attention... Les mots sont écrit dans n'importe quel sens ! Projet réalisé durant un trajet de voiture de 5h, coupé d'internet.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/entrainement-lecture" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/entrainement-lecture" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/entrainement-lecture.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2020 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Blank Board</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Jeu artistique de type clicker dont le but du jeu est de remplir un tableau entièrement de blanc. J'ai créé ce jeu en une journée pour un défi personnel en quête d'apprentissage !</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/blan-board" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/blan-board" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/blank-board2.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2020 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Dead Goblin</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Ce jeu est un RPG idle-incrémental textuel où il faut tuer des gobelins pour améliorer son équipement et battre les boss pour débloquer du contenu et devenir surpuissant !</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/dead-goblin" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/dead-goblin" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/dead-goblin (2).png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/dead-goblin (3).png" alt="Portfolio" class="projectImage"/>
+                        <img src="images/dead-goblin (1).png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="website, videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Siteweb - Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>RPG generator</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Un générateur d'idle RPG basique avec un peu trop d'options...</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://www.php.net/manual/fr/intro-whatis.php" target="_blank">PHP</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank">SQL</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a class="no-decoration no-link">🔗 Pas de lien...</a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a class="projectBackgroundLink no-decoration" >
+                        <img src="images/rpg1.PNG" alt="Portfolio" class="projectImage"/>
+                        <img src="images/rpg2.PNG" alt="Portfolio" class="projectImage"/>
+                        <img src="images/rpg3.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>2 souris 1 curseur</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Branchez une deuxième souris à votre ordinateur et vous aurez deux souris pour un curseur. J'ai réalisé ce mini-jeu lorsque je me suis rendu compte que c'était possible...</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/2-souris-1-curseur?password=old" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/2-souris-1-curseur?password=old" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/2s1c.png" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="tool">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Outil
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Multilink</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Cet outil permettait d'insérer autant de liens que l'on voulait et il nous générait un lien unique permettant d'ouvrir tous les liens d'un clic.</p>
+                        <p>Pratique quand on travaille sur plusieurs articles en même temps.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank">SQL</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a class="no-decoration no-link">🔗 Pas de lien...</a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a class="projectBackgroundLink no-decoration">
+                        <div class="not-found">
+                            ?
+                        </div>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="tool">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Outil
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Short link</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Cet outil permettait de raccourcir un lien. Par exemple, on transforme le lien https://example.com/684RGZ64rgz3G1Avbtelf en https://ulgru.de/K3bf8s</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank">SQL</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a class="no-decoration no-link">🔗 Pas de lien...</a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a class="projectBackgroundLink no-decoration">
+                        <div class="not-found">
+                            ?
+                        </div>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Yahtzee</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Le classique Yahtzee (ou Yam's). On lance les dés, on garde ceux que l'on veut sur 3 lancés puis on complète la grille. Réalisé pour un projet universitaire, fait entièrement en PHP.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://www.php.net/manual/fr/intro-whatis.php" target="_blank">PHP</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a class="no-decoration no-link">🔗 Pas de lien...</a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a class="projectBackgroundLink no-decoration" >
+                        <img src="images/yahtzee.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+            <div class="spawn project" data-tag="videogame">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2019 • Jeu vidéo
+                    </div>
+                    <div class="projectTitle">
+                        <h2>Shifumi</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>Le classique pierre feuille ciseau, un jeu à trois boutons contre un robot.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="projectLinks">
+                        <a href="https://ulgrude.itch.io/shifumi?password=old" class="no-decoration extend-underlink" target="_blank">🔗 <span class="underlink">Accéder au projet</span></a>
+                    </div>
+                </div>
+                <div class="projectBackground">
+                    <a href="https://ulgrude.itch.io/shifumi?password=old" class="projectBackgroundLink no-decoration" target="_blank">
+                        <img src="images/shifumi.PNG" alt="Portfolio" class="projectImage"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separateur separateur-top"></div>
+
+        <div id="competences" class="content">
+            <h1>Mes compétences</h1>
+            <div class="backgroundSkill">
+                <div class="flex-row spawn">
+                    <a href="https://fr.wikipedia.org/wiki/HTML5" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">HTML</p>
+                        <img src="images/html5.png" alt="HTML" class="tech-image" />
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">CSS</p>
+                        <img src="images/css.png" alt="CSS" class="tech-image" />
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">JavaScript</p>
+                        <img src="images/JavaScript.png" alt="JavaScript" class="tech-image" />
+                    </a>
+                    <a href="https://www.php.net/manual/fr/intro-whatis.php" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">PHP</p>
+                        <img src="images/PHP.png" alt="PHP" class="tech-image" />
+                    </a>
+                    <a href="https://symfony.com/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">Symfony</p>
+                        <img src="images/symfony.png" alt="Symfony" class="tech-image" />
+                    </a>
+                </div>
+                <div class="flex-row spawn">
+                    <a href="https://fr.wikipedia.org/wiki/C_(langage)" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">C</p>
+                        <img src="images/C.png" alt="C" class="tech-image" />
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/C_Sharp" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">C#</p>
+                        <img src="images/C_sharp.png" alt="C#" class="tech-image" />
+                    </a>
+                    <a href="https://www.java.com/fr/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">Java</p>
+                        <img src="images/Java.png" alt="Java" class="tech-image" />
+                    </a>
+                    <a href="https://www.python.org/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">Python</p>
+                        <img src="images/python.png" alt="python" class="tech-image" />
+                    </a>
+                    <a href="https://fr.wikipedia.org/wiki/Assembleur" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">Assembleur</p>
+                        <img src="images/assembleur.png" alt="Assembleur" class="tech-image" />
+                    </a>
+                </div>
+                <div class="flex-row spawn">
+                    <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">SQL</p>
+                        <img src="images/sql.png" alt="SQL" class="tech-image" />
+                    </a>
+                    <a href="https://ocaml.org/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">OCaml</p>
+                        <img src="images/OCaml.png" alt="OCaml" class="tech-image" />
+                    </a>
+                    <a href="https://www.autohotkey.com/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">AutoHotKey</p>
+                        <img src="images/ahk.png" alt="AutoHotKey" class="tech-image" />
+                    </a>
+                </div>
+            </div>
+            <div class="backgroundSkill">
+                <div class="flex-row spawn">
+                    <a href="https://www.mysql.com/fr/products/workbench/" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">MySQL Workbench</p>
+                        <img src="images/mysqlworkbench.png" alt="MySQL Workbench" class="tech-image" />
+                    </a>
+                    <a href="https://unity.com/fr" target="_blank" class="no-decoration tech-card">
+                        <p class="card-name">Unity</p>
+                        <img src="images/unity.png" alt="Unity" class="tech-image" />
+                    </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="separateur separateur-bottom"></div>
+
+        <div id="experiences" class="content backgroundColor">
+            <h1>Expériences</h1>
+            <div class="spawn project active">
+                <div class="projectInfo">
+                    <div class="projectDate">
+                        2022
+                    </div>
+                    <div class="projectTitle">
+                        <h2>CS-Lane</h2>
+                    </div>
+                    <div class="projectDescription">
+                        <p>J'ai réalisé un stage de 2 mois chez CS-Lane qui est une entreprise qui propose des aides au transport pour les seniors et les personnes en situation de handicap.</p><p>L'un de mes projets a consisté à développer une application de gestion de client avec le framework Symfony.</p>
+                    </div>
+                    <div class="projectTechnologies">
+                        <ul>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank">CSS</a></li>
+                            <li><a class="no-decoration" href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
+                            <li><a class="no-decoration" href="https://www.php.net/manual/fr/intro-whatis.php" target="_blank">PHP</a></li>
+                            <li><a class="no-decoration" href="https://symfony.com/" target="_blank">Symfony</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="projectBackground" style="background-color: white;">
+                    <a href="https://cslane.com/" class="no-decoration projectBackgroundLink" target="_blank">
+                        <img src="images/cslane.png" alt="Portfolio" class="projectImage" style="object-fit: scale-down;"/>
+                    </a>
+                    <div class="dotNavigation">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separateur separateur-top"></div>
+
+        <div id="contact" class="content">
+            <h1>Contact</h1>
+            <div class="flex-row wrap">
+                <div class="backgroundSkill">
+                    <a href="https://fr.linkedin.com/in/angelo-foti-013791236" target="_blank" class="no-decoration active-no-wrap">
+                        <img src="images/linkedin.png" alt="Linkedin" class="tech-image" />
+                        <p class="no-wrap">in/angelo-foti-013791236</p>
+                    </a>
+                </div>
+                <div class="backgroundSkill">
+                    <div class="active-no-wrap">
+                        <a href="mailto:angelo.foti76@gmail.com" class="no-decoration" target="_blank">
+                            <img src="images/gmail.png" alt="GMail" class="tech-image" />
+                        </a>
+                        <p class="no-wrap">angelo.foti76@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="flex-footer">
+                <p>Merci d'avoir visité mon portfolio !</p>
+                <small>© 2023 Angelo Foti</small>
+            </div>
+        </footer>
+
+        <script src="./script/script.js"></script>
+        <script src="./script/scroll.js"></script>
+        <script src="./script/spawn.js"></script>
+    </body>
+</html>
