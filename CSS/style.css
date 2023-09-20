@@ -153,6 +153,12 @@ html {
     }
 }
 
+@media screen and (max-height: 600px) {
+    #home-content {
+        transform: scale(0.5) translateY(-100%);
+    }
+}
+
 .plus {
     position: relative;
     display: block;
