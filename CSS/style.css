@@ -134,7 +134,7 @@ html {
 }
 
 .width90 {
-    width: 90%;
+    max-width: 90%;
 }
 
 @media screen and (max-width: 800px) {
