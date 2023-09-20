@@ -116,16 +116,7 @@ for (var i = 0; i < sortButtons.length; i++) {
                 }
             }
         }
-        // on modifie le style background de #projets
-        var projets = document.getElementById("projets");
-        var nombreProjets = count;
-        var pourcentage = 33;
-        if (nombreProjets < 13 && nombreProjets > 1) {
-            pourcentage = 60;
-        } else if (nombreProjets >= 13) {
-            pourcentage = 95;
-        }
-        projets.style.background = "radial-gradient(circle, rgb(131 8 54) 0%, rgba(64,0,24,1) " + pourcentage + "%)";
+        checkElements();
     });
 }
 
