@@ -639,6 +639,10 @@ h1 {
     max-width: 98px;
 }
 
+.flex-row > .tech-card > .card-name {
+    font-size: smaller;
+}
+
 /* quand on met la souris sur .card-name, on applique transform: scale(1.1) à son frère .tech-image */
 .tech-card:hover > .tech-image {
     transform: scale(1.3);
