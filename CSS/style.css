@@ -16,7 +16,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 /* link */
@@ -566,10 +565,6 @@ h1 {
 
     .dotNavigation {
         display: none!important;
-    }
-
-    .spawn {
-        opacity: 1;
     }
 }
 
